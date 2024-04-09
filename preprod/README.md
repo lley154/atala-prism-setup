@@ -32,6 +32,8 @@
   - Decode credential from base 64
   - View credential JWT
 
+### Demo System Components
+![image](https://github.com/lley154/atala-prism-setup/assets/7105016/1e921e0c-2864-4b05-81bc-191a62ffaed2)
 
 ### Environment variable files
 ```
@@ -63,3 +65,12 @@ apache/apisix                          2.15.0-alpine   7d2986d15386   145MB
 ghcr.io/intersectmbo/cardano-db-sync   13.2.0.1        b3edd35e9ddc   1.48GB
 cardanofoundation/cardano-wallet       2024.3.27       06944a4785b2   1.24GB
 ```
+
+### Reference Links
+- [https://github.com/hyperledger/identus](https://github.com/hyperledger/identus)
+- [https://github.com/IntersectMBO/cardano-node](https://github.com/IntersectMBO/cardano-node)
+- [https://github.com/IntersectMBO/cardano-db-sync](https://github.com/IntersectMBO/cardano-db-sync)
+- [https://github.com/cardano-foundation/cardano-wallet](https://github.com/cardano-foundation/cardano-wallet)
+- [https://credentialbuilder.blocktrust.dev/](https://credentialbuilder.blocktrust.dev/)
+- [https://analytics.blocktrust.dev/](https://analytics.blocktrust.dev/)
+
