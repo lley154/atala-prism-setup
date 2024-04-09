@@ -48,7 +48,7 @@
 ```
 ### Docker Images
 ```
-lawrence@lawrence-iMac:~/src/atala-prism-setup$ docker images
+$ docker images
 REPOSITORY                             TAG             IMAGE ID       CREATED         SIZE
 hashicorp/vault                        latest          3b58e3e77ac1   6 days ago      430MB
 dpage/pgadmin4                         latest          f3e7a186b202   8 days ago      476MB
