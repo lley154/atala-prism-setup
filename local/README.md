@@ -19,33 +19,19 @@ sudo apt -y install docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 newgrp docker 
 docker run hello-world
-git clone https://github.com/hyperledger-labs/open-enterprise-agent.git
-cd open-enterprise-agent/infrastructure/local
-git checkout prism-agent-v1.28.0
-echo "PRISM_AGENT_VERSION=1.28.0
-PRISM_NODE_VERSION=2.2.1
-PORT=8080
-VAULT_DEV_ROOT_TOKEN_ID=root
-PG_PORT=5432 " > .env-issuer
-
-echo "PRISM_AGENT_VERSION=1.28.0
-PRISM_NODE_VERSION=2.2.1
-PORT=8090
-VAULT_DEV_ROOT_TOKEN_ID=root
-PG_PORT=5433 " > .env-holder
+git clone https://github.com/lley154/atala-prism-setup.git
+cd atala-prism-setup/local
 ```
 Open another terminal window and log into AWS instance with port forwarding
 ```
 ssh -i your-pem-file.pem -L 8080:aws-instance-dns-name:8080 ubuntu@aws-instance-dns-name
-cd open-enterprise-agent/infrastructure/local
-cp .env-issuer .env
+cd atala-prism-setup/local
 ./run.sh -e .env-issuer -d host.docker.internal -n issuer -p 8080
 ```
 Open another terminal window and log into AWS instance
 ```
 ssh -i your-pem-file.pem -L 8090:aws-instance-dns-name:8090 ubuntu@aws-instance-dns-name
-cd open-enterprise-agent/infrastructure/local
-cp .env-holder .env
+cd atala-prism-setup/local
 ./run.sh -e .env-holder -d host.docker.internal -n holder -p 8090
 ```
 
