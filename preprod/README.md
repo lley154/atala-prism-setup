@@ -1,5 +1,6 @@
-# Atala Prism Cardano VDR setup video
+# Atala Prism Cardano VDR Setup
 
+### Video Content
 - SSI principles
 - Atala prism components
 - Local setup review
@@ -30,3 +31,19 @@
   - Use Swagger UI to view credentials on Holder agent
   - Decode credential from base 64
   - View credential JWT
+
+
+### Environment variable files
+```
+.env-cardano
+.env-issuer
+.env-holder
+```
+
+### Script Execution
+```
+./cardano-start.sh
+./prism-start.sh -e .env-issuer -d host.docker.internal -n issuer -p 8080 -b
+./prism-start.sh -e .env-holder -d host.docker.internal -n holder -p 8090 -b
+```
+
