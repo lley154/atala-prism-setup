@@ -1,4 +1,4 @@
-# Atala Prism Setup Walkthrough
+# Atala Prism Setup Scenarios
 
 ## Local Setup (without Cardano VDR)
 Setup a local prism stack using a development mode with an in-memory ledger
