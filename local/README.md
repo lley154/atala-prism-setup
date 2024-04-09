@@ -39,3 +39,4 @@ Access the issuer prism agent by going to http://localhost:8080/docs/prism-agent
 
 Access the holder prism agent by going to http://localhost:8090/docs/prism-agent/api/
 
+Check out a demo [video](https://youtu.be/VsL5Q726ooc) showing how to interact with the local Atala Prism setup above. 
