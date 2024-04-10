@@ -5,7 +5,7 @@
 - Atala prism components
 - Local setup review
 - Cardano Preprod setup
-  - Cardano VDR	
+  - Cardano VDR	(Verifiable Data Registry)
   - Review cardano docker file
   - Start up cardano VDR docker network
   - Show Cardano node progress
