@@ -1,6 +1,10 @@
+# List all docker containers
+# --------------------------
+#docker ps -a
+
+
 # Remove all docker containers
 # -----------------------------
-#docker ps -a
 #docker rm -f $(docker ps -a -q)
 #docker rm -f $(docker ps -a | grep issuer | awk '{print $1}')
 #docker rm -f $(docker ps -a | grep holder | awk '{print $1}')
@@ -21,4 +25,4 @@
 # Remove all docker images
 # ---------------------------
 #docker images
-#docker images prune -a
+#docker images prune
