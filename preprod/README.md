@@ -1,4 +1,4 @@
-# Atala Prism Cardano VDR Setup
+# Atala Prism (Identus) Cardano VDR Setup
 
 ### [Video Content](https://youtu.be/8CdnCkSDm7M) 
 - SSI principles
