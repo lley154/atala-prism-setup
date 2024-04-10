@@ -1,6 +1,6 @@
 # Atala Prism Cardano VDR Setup
 
-### Video Content
+### [Video Content](https://youtu.be/8CdnCkSDm7M) 
 - SSI principles
 - Atala prism components
 - Local setup review
