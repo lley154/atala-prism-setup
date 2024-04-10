@@ -13,17 +13,17 @@
   - Create wallets using Icarus
   - Transfer funds to pay for DID publishing
 - Issuer Agent Setup
-  - Review prism agent docket file
-  - Startup up Issuer docker network
+  - Review prism agent docker file
+  - Start up Issuer docker network
   - Monitor Issuer prism agent log file
   - Monitor cardano wallet log file
   - Launch Blocktrust.dev credential builder
-  - Connect to Issuer agent
-  - Create DID and publish
+  - Connect to Issuer Agent
+  - Create DID and publish to VDR
   - Monitor Icarus wallet for required depth of 112 blocks
   - View on Blockturst.dev analytics of DID created
 - Holder Agent Setup
-  - Startup up Holder docker network
+  - Start up Holder docker network
   - Monitor Holder prism agent log file
 - Verifiable Credential
   - Create connection between Issuer and Holder
