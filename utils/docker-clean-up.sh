@@ -24,5 +24,5 @@
 
 # Remove all docker images
 # ---------------------------
-#docker images
-#docker images prune
+#docker image ls
+#docker image prune -a
