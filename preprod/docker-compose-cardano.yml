@@ -20,7 +20,7 @@ services:
     healthcheck:
       # Use pg_isready to check postgres is running. Substitute different
       # user `postgres` if you've setup differently to config/pgpass-mainnet
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -32,7 +32,7 @@ services:
         max-file: "10"
 
   cardano-node:
-    image: ghcr.io/intersectmbo/cardano-node:8.7.3
+    image: ghcr.io/intersectmbo/cardano-node:9.1.1
     environment:
       - NETWORK=${NETWORK:-mainnet}
     volumes:
@@ -42,7 +42,7 @@ services:
     healthcheck:
       # Ping the EKG port to see if it responds.
       # Assuming if EKG isn't up then the rest of cardano-node isn't either.
-      test: ["CMD-SHELL", "curl -f 127.0.0.1:12788 || exit 1"]
+      test: [ "CMD-SHELL", "curl -f 127.0.0.1:12788 || exit 1" ]
       interval: 60s
       timeout: 10s
       retries: 5
@@ -53,7 +53,7 @@ services:
         max-file: "10"
 
   cardano-wallet:
-    image: cardanofoundation/cardano-wallet:${WALLET_TAG:-2024.3.27}
+    image: cardanofoundation/cardano-wallet:${WALLET_TAG:-2024.9.3}
     volumes:
       - wallet-db:/wallet-db
       - node-ipc:/ipc
@@ -61,10 +61,7 @@ services:
     ports:
       - ${WALLET_PORT:-7090}:8090
     entrypoint: []
-    command: bash -c "
-        ([[ $$NETWORK == \"mainnet\" ]] && $$CMD --mainnet) ||
-        ($$CMD --testnet /configs/${NETWORK}/byron-genesis.json)
-      "
+    command: bash -c " ([[ $$NETWORK == \"mainnet\" ]] && $$CMD --mainnet) || ($$CMD --testnet /configs/${NETWORK}/byron-genesis.json) "
     environment:
       CMD: "cardano-wallet serve --node-socket /ipc/node.socket --database /wallet-db --listen-address 0.0.0.0"
       NETWORK:
@@ -75,14 +72,14 @@ services:
         compress: "true"
         max-file: "10"
         max-size: "50m"
-  
+
   icarus:
     image: piotrstachyra/icarus:v2023-04-14
     network_mode: "host"
     restart: on-failure
 
   cardano-db-sync:
-    image: ghcr.io/intersectmbo/cardano-db-sync:13.2.0.1
+    image: ghcr.io/intersectmbo/cardano-db-sync:13.5.0.2
     environment:
       - DISABLE_LEDGER=${DISABLE_LEDGER:-N}
       - NETWORK=${NETWORK:-mainnet}
@@ -124,6 +121,7 @@ volumes:
   postgres-db-sync:
   node-ipc:
   wallet-db:
+
 
 networks:
   default:
