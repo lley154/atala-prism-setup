@@ -14,3 +14,5 @@ curl https://book.play.dev.cardano.org/environments/preprod/shelley-genesis.json
     > shelley-genesis.json
 curl https://book.play.dev.cardano.org/environments/preprod/alonzo-genesis.json \
     > alonzo-genesis.json
+curl https://book.play.dev.cardano.org/environments/preprod/conway-genesis.json \
+    > conway-genesis.json

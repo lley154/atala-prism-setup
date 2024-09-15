@@ -17,7 +17,7 @@ services:
     ports:
       - "${PG_PORT:-5433}:5432"
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "agent"]
+      test: [ "CMD", "pg_isready", "-U", "postgres", "-d", "agent" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -68,7 +68,7 @@ services:
         condition: service_healthy
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    
+
   vault-server:
     image: hashicorp/vault:latest
     # ports:
@@ -80,7 +80,7 @@ services:
     cap_add:
       - IPC_LOCK
     healthcheck:
-      test: ["CMD", "vault", "status"]
+      test: [ "CMD", "vault", "status" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -111,7 +111,7 @@ services:
       VAULT_TOKEN: ${VAULT_DEV_ROOT_TOKEN_ID:-root}
       SECRET_STORAGE_BACKEND: postgres
       DEV_MODE: "true"
-      DEFAULT_WALLET_ENABLED: "true" 
+      DEFAULT_WALLET_ENABLED: "true"
       DEFAULT_WALLET_SEED:
       DEFAULT_WALLET_WEBHOOK_URL:
       DEFAULT_WALLET_WEBHOOK_API_KEY:
@@ -132,7 +132,7 @@ services:
       vault-server:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://prism-agent:8085/_system/health"]
+      test: [ "CMD", "curl", "-f", "http://prism-agent:8085/_system/health" ]
       interval: 30s
       timeout: 10s
       retries: 5
@@ -142,9 +142,7 @@ services:
   swagger-ui:
     image: swaggerapi/swagger-ui:v5.1.0
     environment:
-      - 'URLS=[
-        { name: "Prism Agent", url: "/docs/prism-agent/api/docs.yaml" }
-        ]'
+      - 'URLS=[ { name: "Prism Agent", url: "/docs/prism-agent/api/docs.yaml" } ]'
 
   apisix:
     image: apache/apisix:2.15.0-alpine
@@ -160,6 +158,7 @@ services:
 volumes:
   postgres-db-prism:
   pgadmin:
+
 
 networks:
   default:
