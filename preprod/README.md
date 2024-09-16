@@ -51,19 +51,19 @@
 ### Docker Images
 ```
 $ docker images
-REPOSITORY                             TAG             IMAGE ID       SIZE
-hashicorp/vault                        latest          3b58e3e77ac1   430MB
-dpage/pgadmin4                         latest          f3e7a186b202   476MB
-postgres                               13              745f408317c8   419MB
-ghcr.io/input-output-hk/prism-agent    1.28.0          bfdc74d8db96   712MB
-postgres                               14.10-alpine    85aaba968066   239MB
-ghcr.io/intersectmbo/cardano-node      8.7.3           e472e2321fe3   911MB
-ghcr.io/input-output-hk/prism-node     2.2.1           81ed397df399   784MB
-swaggerapi/swagger-ui                  v5.1.0          2704906c4572   105MB
-piotrstachyra/icarus                   v2023-04-14     7daf5a1d5e9d   299MB
-apache/apisix                          2.15.0-alpine   7d2986d15386   145MB
-ghcr.io/intersectmbo/cardano-db-sync   13.2.0.1        b3edd35e9ddc   1.48GB
-cardanofoundation/cardano-wallet       2024.3.27       06944a4785b2   1.24GB
+REPOSITORY                             TAG             
+hashicorp/vault                        latest          
+dpage/pgadmin4                         latest          
+postgres                               13              
+ghcr.io/input-output-hk/prism-agent    1.28.0          
+postgres                               14.10-alpine    
+ghcr.io/intersectmbo/cardano-node      9.1.1           
+ghcr.io/input-output-hk/prism-node     2.2.1          
+swaggerapi/swagger-ui                  v5.1.0          
+piotrstachyra/icarus                   v2023-04-14     
+apache/apisix                          2.15.0-alpine   
+ghcr.io/intersectmbo/cardano-db-sync   13.2.0.2       
+cardanofoundation/cardano-wallet       2024.9.3       
 ```
 
 ### Reference Links
